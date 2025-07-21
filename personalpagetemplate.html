@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Personal Page Template</title>
+            <link rel="stylesheet" href="personalpagestyles.css">
+        </head>
+        <body>
+            <div class="homepage">
+                <div class="welcome-image">
+                <img id="welcomeimage" alt="Your Icon" src="https://i.pinimg.com/736x/2a/65/0a/2a650a450b72361e915eeba3e9edc18b.jpg" width="220px">
+                </div>
+                <div class="welcome-text">
+                <h1 id="yourname">Your Name</h1>
+                <h2 id="welcome-message">Welcome! Please read <br> through my info!</h2>
+                </div>
+            </div>
+            <div class="buttons">
+                <div id="title1">
+                    <button onclick="show('title1info')"><span style="font-size: 17px;">Title 1</span></button>
+                </div>
+                <div id="title2">
+                    <button onclick="show('title2info')"><span style="font-size: 17px;">Title 2</span></button>
+                </div>
+                <div id="title3">
+                    <button onclick="show('title3info')"><span style="font-size: 17px;">Title 3</span></button>
+                </div>
+                <div id="title4">
+                    <button onclick="show('title4info')"><span style="font-size: 17px;">Title 4</span></button>
+                </div>
+            </div>
+            <div class="infoboxwrapper">
+                <div class="infobox" id="title1info">
+                    <div class="infotext">
+                        <img id="title1img" src="https://i.pinimg.com/736x/ff/da/57/ffda57b5933462c41e49fc2e30bdf498.jpg" height="175px" width="175px">
+                        <h3 id="title1infoheader">Title 1 Info</h3>
+                        <p>⟢ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                </div>
+                <div class="infobox" id="title2info">
+                    <img id="title2img" src="https://i.pinimg.com/736x/08/32/47/083247705454ce21816b13269947a9c0.jpg" height="175px" width="175px">
+                    <h3 id="title2infoheader">Title 2 Info</h3>
+                    <p>⟢ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <div class="infobox" id="title3info">
+                    <img id="title3img" src="https://i.pinimg.com/736x/11/d1/5c/11d15c266d66d3cdf8eaa7870acaa235.jpg" height="175px" width="175px">
+                    <h3 id="title3infoheader">Title 3 Info</h3>
+                    <p>⟢ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+                <div class="infobox" id="title4info">
+                    <img id="title4img" src="https://i.pinimg.com/736x/9b/64/22/9b642205c345ad30e0bf273764c5363a.jpg" height="175px" width="175px">
+                    <h3 id="title4infoheader">Title 4 Info</h3>
+                    <p>⟢ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </div>
+            <script>
+                function show(idToShow) {
+                    const boxes = document.querySelectorAll('.infobox');
+
+                    boxes.forEach(box => {
+                        if (box.id !== idToShow) {
+                            box.classList.remove('show');
+                            box.style.display = 'none';
+                        }
+                    });
+
+                    const target = document.getElementById(idToShow);
+                    target.style.display = 'block';
+                    setTimeout(() => {
+                        target.classList.add('show');
+                    }, 10);
+                }
+            </script>
+        </body>
+        <footer>
+            <p>Template created by @kistarz</p>
+        </footer>
+    </html>
